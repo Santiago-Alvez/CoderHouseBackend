@@ -16,11 +16,8 @@ router.get("/", async (req, res) => {
 
 router.get("/realtimeproducts", async (req, res) => {
   try {
-    const products = await productManager.getProducts();
-    if(products) {
-      io.emit("products", products);
-    }
-    res.render("realTimeProducts");
+   res.render('realTimeProducts')
+    
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Error interno del servidor" });
