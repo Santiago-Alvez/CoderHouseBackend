@@ -4,6 +4,7 @@ import __dirname from "./dirname.js";
 import handlebars, { engine } from "express-handlebars";
 import { Server } from "socket.io";
 import viewsRoutes from "./routes/views.routes.js";
+import productManager from "./productManager.js";
 
 const app = express();
 
